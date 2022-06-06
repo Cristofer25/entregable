@@ -6,13 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./info-persona.component.css']
 })
 export class InfoPersonaComponent {
+ status:string=""
+ 
 
  nombre:string="Cristofer"
 lenguajes:Array<string>=["Angular","html","CSS","Js"]
+
+mostrar(){
+  this.status="mostrar"
+}
+ocultar(){
+  this.status="ocultar"
+}
+
  verificar(){
    if (this.nombre=="Cristofer") {
      
    }
  }
 
+
 }
+

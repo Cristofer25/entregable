@@ -2,11 +2,13 @@
 
 <div *ngIf="nombre=='Cristofer'" class="contenedor">
     <div class="card">
-        <img src="https://bestbuyerpersona.com/wp-content/uploads/2022/02/undraw_profile_pic_ic5t.png" alt="">
+        <img *ngIf="status=='mostrar'" src="https://bestbuyerpersona.com/wp-content/uploads/2022/02/undraw_profile_pic_ic5t.png" alt="">
+        
         <h3>Lenguajes</h3>
         
             <p *ngFor="let item of lenguajes">{{item}}</p>
         
-        <button>mostrar/ocultar</button>
+        <button (click)="mostrar()" (dblclick)="ocultar()">mostrar/ocultar</button>
+        
     </div>
 </div>
