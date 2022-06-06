@@ -5,11 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './info-persona.component.html',
   styleUrls: ['./info-persona.component.css']
 })
-export class InfoPersonaComponent implements OnInit {
+export class InfoPersonaComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+ nombre:string="Cristofer"
+lenguajes:Array<string>=["Angular","html","CSS","Js"]
+ verificar(){
+   if (this.nombre=="Cristofer") {
+     
+   }
+ }
 
 }

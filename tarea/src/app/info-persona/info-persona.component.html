@@ -1,1 +1,12 @@
-<p>info-persona works!</p>
+<h1>Informació de {{nombre}} </h1>
+
+<div *ngIf="nombre=='Cristofer'" class="contenedor">
+    <div class="card">
+        <img src="https://bestbuyerpersona.com/wp-content/uploads/2022/02/undraw_profile_pic_ic5t.png" alt="">
+        <h3>Lenguajes</h3>
+        
+            <p *ngFor="let item of lenguajes">{{item}}</p>
+        
+        <button>mostrar/ocultar</button>
+    </div>
+</div>
