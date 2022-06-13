@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-info-persona',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoPersonaComponent {
  status:string=""
- 
-
  nombre:string="Cristofer"
+ @Output() NuevoCanal = new EventEmitter<string>()
+
+ enviarInfo(){
+  this.NuevoCanal.emit(this.nombre)
+ }
+
+ 
 lenguajes:Array<string>=["Angular","html","CSS","Js"]
 
 mostrar(){
@@ -19,12 +24,7 @@ ocultar(){
   this.status="ocultar"
 }
 
- verificar(){
-   if (this.nombre=="Cristofer") {
-     
-   }
- }
-
+ 
 
 }
 
